@@ -19,7 +19,7 @@ Les tests unitaires constituent une suite d'opérations permettant de vérifier 
   - Si la condition est fausse, un message d'erreur apparaît.
 - **Engine** : Lorsque l'on parle d'Engines, on parle de moteurs d'exécutions de tests.
 - **Coverage** : Le taux de couverture exprime la surface de code testée et donc censée être robuste. Ce taux permet de déterminer à quel point nos tests unitaires recouvrent notre code. Attention toutefois, beaucoup d'entreprises ne jurent que par un 'code coverage' de 100%. Il ne faut néanmoins pas créer du test dans le simple but d'en créer. Chaque test doit ainsi être étudié et sa pertinence pensée lors de sa construction. 
--  **Tests cases** : Les tests cases ou **scénarios de test** servent à vérifier que l'application répond bien aux spécifications demandées. Pour ce faire, le scénario de test comprends le nom de la fonction, la description du test, les conditions préalables requises, les étapes nécessaires à l'exécution du test, les résultats attendus et la sortie réelle. L'erreur doit également être spécifiée avec a minima un message d'erreur, un journal d'erreur, une capture d'écran du problème, et leurs étapes pour reproduire le problème. Le scénario de test peut donc prendre la forme d'un tableau récapitulatif, ou d'une documentation de test. 
+- **Tests cases** : Les tests cases ou **scénarios de test** servent à vérifier que l'application répond bien aux spécifications demandées. Pour ce faire, le scénario de test comprends le nom de la fonction, la description du test, les conditions préalables requises, les étapes nécessaires à l'exécution du test, les résultats attendus et la sortie réelle. L'erreur doit également être spécifiée avec a minima un message d'erreur, un journal d'erreur, une capture d'écran du problème, et leurs étapes pour reproduire le problème. Le scénario de test peut donc prendre la forme d'un tableau récapitulatif, ou d'une documentation de test. 
 - **Fixtures** : Une fixture en testing est une portion de données prédéfinie utilisée pour tester une fonction ou un composant particulier. Elles peuvent être utilisées pour fournir des entrées connues à un test, afin de s'assurer que les résultats produits sont corrects. Les fixtures permettent également de standardiser les entrées pour les tests, ce qui peut aider à éviter les erreurs d'encodage ou les oublis de données dans les tests manuels.
 - **Tests suites** : La suite de tests est un groupement de tests assemblés de façon logique qui vérifient un aspect du comportement de l'application. L'organisation des tests permet de mieux gérer les erreurs, dans le but de mieux gérer les retouches de code ou les ajouts de fonctionnalités. 
 - **Automation** : La 'test automation', ou automatisation des tests est un processus orienté Devops
@@ -43,6 +43,20 @@ Les tests unitaires constituent une suite d'opérations permettant de vérifier 
 - **Tests exploratoires** : Ces tests n'adoptent pas de méthodologie structurée et explorent l'application afin de simuler les comportements utilisateurs attendus et inattendus.
 - **Les tests de performance** : ces tests mesurent les performances d'un système sous différentes contraintes. 
 - **Les tests de qualité** : ces tests vérifient la qualité de l'application en plusieurs termes : Qualité globale, sécurité, expérience utilisateur, ...'
+
+### Les outils 
+
+|         **Mot-clé**        |                                                                                    **Outils associé**                                                                                   |
+|:--------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|        Test Unitaire       |                            [Jest](https://jestjs.io/fr/) [Mocha](https://mochajs.org/) [Jasmine](https://jasmine.github.io/) [Chai](https://www.chaijs.com/)                            |
+| Coverage / Branch coverage |                                   [Istanbul](https://istanbul.js.org/) [C8](https://www.npmjs.com/package/c8) [NYC](https://www.npmjs.com/package/nyc)                                  |
+|     Scénarios de tests     |                                                                            [cucumber](https://cucumber.io/)                                                                             |
+|        Tests doubles       |                  [Jest](https://jestjs.io/fr/) [Mocha](https://mochajs.org/) [Sinon.js](https://sinonjs.org/) [testbouble.js](https://www.npmjs.com/package/testdouble)                 |
+|          Entropie          |                            [SonarQube](https://www.sonarsource.com/products/sonarqube/) [ESLint](https://eslint.org/) [CodeClimate](https://codeclimate.com/)                           |
+|    Tests de bout en bout   |             [Cypress](https://www.cypress.io/) [Puppeteer](https://pptr.dev/) [Selenium](https://www.selenium.dev/documentation/webdriver/) [testCafe](https://testcafe.io/)            |
+|     Tests exploratoires    |               [BrowserStack](https://www.browserstack.com/) [Sauce Labs](https://saucelabs.com/) [Ghost Inspector](https://ghostinspector.com/) [Percy](https://percy.io/)              |
+|    Tests de performance    | [JMeter](https://jmeter.apache.org/) [LoadRunner](https://www.microfocus.com/fr-fr/products/loadrunner-professional/overview) [Gatling](https://gatling.io/) [wrk](https://wrk.com/fr/) |
+|      Tests de qualité      |                                              [ESLint](https://eslint.org/) [jslint](https://www.jslint.com/) [JsHint](https://jshint.com/)                                              |
 
 
 ### Les Tests en CI/CD
