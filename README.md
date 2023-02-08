@@ -2,7 +2,7 @@
 
 Ceci est un repository dédié à la découverte des tests-unitaires Javascript/Typescript.
 
-**Attention**, les exemples et définition de ce repository concernent le langage Javascript. Si les concepts sont les mêmes, les exemples en fonction des langages risquent de différer.
+**Attention**, les exemples et définitions de ce repository concernent le langage Javascript. Si les concepts sont les mêmes, les exemples en fonction des langages risquent de différer.
 
 ## Définitions 
 
