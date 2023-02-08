@@ -36,30 +36,56 @@ Les tests unitaires constituent une suite d'opérations permettant de vérifier 
 - **Test Driven Development** : Le TDD est le développement piloté par les tests. C'est une méthodologie de développement qui pousse les développeurs à tester toutes les fonctionnalités de l'application. Cette approche conseille même de concevoir ces tests en amont du développement des fonctionnalités, de façon à ce que l'étape de développement ne puisse rencontrer d'écart avec la ligne directrice fonctionnelle.  
 - **Branch coverage** : La définition du branch coverage est une extension de la définition de coverage étendue aux branches. L'objectif erst de s'assurer que toutes les branches ont été testées.
 - **Entropy** : L'entropie peut être comprise comme une forme de mesure de la complexité du code. Une entropie élevée correspond à un code complexe tandis qu'une entropie basse correspond à un code compréhensible et propre. Beaucoup d'indicateurs peuvent ou non être considérés en fonction des choix dans la mesure. Entre autre : le nombre de ligne de code par fichier, le nombre de fichiers, les profondeurs d'imbrications, le nombre de branches, les routes de fichiers et l'architecture, .. Dans tous les cas, cela reste une mesure personnelle et subjective.
+- **Snapshot testing** : Les tests snapshot ou instantanés permettent de comparer un composant de l'interface utilisateur à un composant de référence stocké, les deux composants doivent correspondre pour que le test passe.
+- **Inline Snapshots** : Les Inline snapshot sont des snapshot avec un code écrit à l'intérieur, sans passer par un instantané externe.
+- **Smoke tests** ! Les tests de fumée sont des tests qui testent les fonctions critiques de l'application avant l'investigation des fonctions plus avancées. Par exemple, avant detester une fonction, le smoke test peut vouloir répondre à la question "l'application s'allume-t-elle ?" En cas de réponse négative, rien ne sert d'aller plus loin. 
+
 
 ##### Les autres types de test :
+
 - **Tests d'intégration** : ce sont des tests qui vérifient la manière dont les différentes parties du code fonctionnent ensemble.
 - **Tests de bout en bout** : ce sont des tests qui simulent l'interaction avec le système comme un utilisateur final. Ils permettent de vérifier que l'application répond bien aux besoins des utilisateurs.
+- **Composant Testing** : Les tests de composants peuvent être considérés comme des tests intermédiaires entre les tests unitaires et les tests end-to-end.C'est un entre deux entre performance et le meilleur test coverage. Ils prennent notamment leur sens lorsque l'on parle de microservices. 
 - **Tests exploratoires** : Ces tests n'adoptent pas de méthodologie structurée et explorent l'application afin de simuler les comportements utilisateurs attendus et inattendus.
 - **Les tests de performance** : ces tests mesurent les performances d'un système sous différentes contraintes. 
 - **Les tests de qualité** : ces tests vérifient la qualité de l'application en plusieurs termes : Qualité globale, sécurité, expérience utilisateur, ...'
+- **Le Contract Testing** : [contract testing et le framework PACT](https://docs.pact.io/)
+
+
 
 ### Les outils 
 
-|         **Mot-clé**        |                                                                                    **Outils associé**                                                                                   |
+|        **Mot-clé**         |                                                                                   **Outils associé**                                                                                    |
 |:--------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-|        Test Unitaire       |                            [Jest](https://jestjs.io/fr/) [Mocha](https://mochajs.org/) [Jasmine](https://jasmine.github.io/) [Chai](https://www.chaijs.com/)                            |
-| Coverage / Branch coverage |                                   [Istanbul](https://istanbul.js.org/) [C8](https://www.npmjs.com/package/c8) [NYC](https://www.npmjs.com/package/nyc)                                  |
+|       Test Unitaire        |                            [Jest](https://jestjs.io/fr/) [Mocha](https://mochajs.org/) [Jasmine](https://jasmine.github.io/) [Chai](https://www.chaijs.com/)                            |
+| Coverage / Branch coverage |                                  [Istanbul](https://istanbul.js.org/) [C8](https://www.npmjs.com/package/c8) [NYC](https://www.npmjs.com/package/nyc)                                   |
 |     Scénarios de tests     |                                                                            [cucumber](https://cucumber.io/)                                                                             |
-|        Tests doubles       |                  [Jest](https://jestjs.io/fr/) [Mocha](https://mochajs.org/) [Sinon.js](https://sinonjs.org/) [testbouble.js](https://www.npmjs.com/package/testdouble)                 |
-|          Entropie          |                            [SonarQube](https://www.sonarsource.com/products/sonarqube/) [ESLint](https://eslint.org/) [CodeClimate](https://codeclimate.com/)                           |
-|    Tests de bout en bout   |             [Cypress](https://www.cypress.io/) [Puppeteer](https://pptr.dev/) [Selenium](https://www.selenium.dev/documentation/webdriver/) [testCafe](https://testcafe.io/)            |
-|     Tests exploratoires    |               [BrowserStack](https://www.browserstack.com/) [Sauce Labs](https://saucelabs.com/) [Ghost Inspector](https://ghostinspector.com/) [Percy](https://percy.io/)              |
+|       Tests doubles        |                 [Jest](https://jestjs.io/fr/) [Mocha](https://mochajs.org/) [Sinon.js](https://sinonjs.org/) [testbouble.js](https://www.npmjs.com/package/testdouble)                  |
+|          Entropie          |                           [SonarQube](https://www.sonarsource.com/products/sonarqube/) [ESLint](https://eslint.org/) [CodeClimate](https://codeclimate.com/)                            |
+|   Tests de bout en bout    |            [Cypress](https://www.cypress.io/) [Puppeteer](https://pptr.dev/) [Selenium](https://www.selenium.dev/documentation/webdriver/) [testCafe](https://testcafe.io/)             |
+|    Tests exploratoires     |              [BrowserStack](https://www.browserstack.com/) [Sauce Labs](https://saucelabs.com/) [Ghost Inspector](https://ghostinspector.com/) [Percy](https://percy.io/)               |
 |    Tests de performance    | [JMeter](https://jmeter.apache.org/) [LoadRunner](https://www.microfocus.com/fr-fr/products/loadrunner-professional/overview) [Gatling](https://gatling.io/) [wrk](https://wrk.com/fr/) |
 |      Tests de qualité      |                                              [ESLint](https://eslint.org/) [jslint](https://www.jslint.com/) [JsHint](https://jshint.com/)                                              |
+ |            Autres          |                                     [TestCheck](https://github.com/leebyron/testcheck-js) [fastCheck](https://github.com/dubzzz/fast-check#readme)                                      | 
+
+### La Pyramide de tests 
+
+[pyramide de test](https://martinfowler.com/bliki/TestPyramid.html)
+[Testing Microservices](https://copyconstruct.medium.com/testing-microservices-the-sane-way-9bb31d158c16)
+[Testing in Prodiuction, the safe way](https://copyconstruct.medium.com/testing-in-production-the-safe-way-18ca102d0ef1)
+[Testing in production, The hard parts](https://copyconstruct.medium.com/testing-in-production-the-hard-parts-3f06cefaf592)
 
 
 ### Les Tests en CI/CD
+
+
+### Les tests Infrastructure
+
+[Les tests du chaos](https://principlesofchaos.org/)
+[Chaos Monkey](https://github.com/Netflix/chaosmonkey)
+[node chaos monkey - à venir](https://github.com/goldbergyoni/node-chaos-monkey)
+
+
 
 ### Les différents moteurs et librairies de test : 
 
