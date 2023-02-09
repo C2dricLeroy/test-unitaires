@@ -1,0 +1,29 @@
+{
+  "name": "test-unitaires",
+  "version": "1.0.0",
+  "description": "Ceci est un repository dédié à la découverte des tests-unitaires Javascript/Typescript.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "c8 mocha test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/C2dricLeroy/test-unitaires.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/C2dricLeroy/test-unitaires/issues"
+  },
+  "homepage": "https://github.com/C2dricLeroy/test-unitaires#readme",
+  "devDependencies": {
+    "c8": "^7.12.0",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0"
+  },
+  "dependencies": {
+    "chai": "^4.3.7"
+  }
+}

@@ -51,8 +51,6 @@ Les tests unitaires constituent une suite d'opérations permettant de vérifier 
 - **Les tests de qualité** : ces tests vérifient la qualité de l'application en plusieurs termes : Qualité globale, sécurité, expérience utilisateur, ...'
 - **Le Contract Testing** : [contract testing et le framework PACT](https://docs.pact.io/)
 
-
-
 ### Les outils 
 
 |        **Mot-clé**         |                                                                                   **Outils associé**                                                                                    |
